@@ -1,0 +1,42 @@
+name: Auto Update Repository
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+jobs:
+  auto-commit:
+    runs-on: windows-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Write update timestamp
+        shell: pwsh
+        run: |
+          $ts = Get-Date -Format "yyyy-MM-dd HH:mm:ss 'UTC'"
+          $content = "Last auto-update: $ts`nRun ID: ${{ github.run_id }}"
+          Set-Content -Path "last-updated.txt" -Value $content -Encoding UTF8
+
+      - name: Commit and push if changed
+        shell: pwsh
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add last-updated.txt
+          $status = git status --porcelain
+          if ($status) {
+            $date = Get-Date -Format "yyyy-MM-dd HH:mm"
+            git commit -m "chore: auto-update $date"
+            git push
+            Write-Host "Committed and pushed at $date"
+          } else {
+            Write-Host "Nothing to commit"
+          }
