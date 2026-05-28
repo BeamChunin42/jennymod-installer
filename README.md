@@ -4,7 +4,7 @@
 
 # jennyMod Installer
 
-**One-click Windows installer for JennyMod — the popular Minecraft mod**
+**One-click Windows installer for JennyMod — the popular Minecraft mod!**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows-0078d4?logo=windows)](https://github.com/topics/windows)
