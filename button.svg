@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="80" viewBox="0 0 420 80">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1a3d1f"/>
+      <stop offset="100%" stop-color="#0d1f2d"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#39d353"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#39d353" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Button body -->
+  <rect x="2" y="2" width="416" height="76" rx="14" fill="url(#bg)" filter="url(#shadow)"/>
+
+  <!-- Gradient border -->
+  <rect x="2" y="2" width="416" height="76" rx="14" fill="none" stroke="url(#glow)" stroke-width="2"/>
+
+  <!-- Top shimmer -->
+  <rect x="3" y="3" width="414" height="20" rx="13" fill="white" opacity="0.04"/>
+
+  <!-- Minecraft grass block -->
+  <!-- top grass -->
+  <rect x="22" y="18" width="40" height="13" rx="2" fill="#78b000"/>
+  <rect x="26" y="20" width="5" height="5" fill="#6aa000" opacity="0.6"/>
+  <rect x="36" y="21" width="4" height="4" fill="#6aa000" opacity="0.6"/>
+  <rect x="48" y="20" width="6" height="4" fill="#6aa000" opacity="0.6"/>
+  <!-- dirt -->
+  <rect x="22" y="31" width="40" height="28" rx="2" fill="#8B6914"/>
+  <rect x="27" y="35" width="5" height="5" fill="#7a5a10" opacity="0.5"/>
+  <rect x="38" y="41" width="6" height="5" fill="#7a5a10" opacity="0.5"/>
+  <rect x="49" y="36" width="5" height="5" fill="#7a5a10" opacity="0.5"/>
+  <rect x="31" y="48" width="7" height="5" fill="#7a5a10" opacity="0.5"/>
+
+  <!-- Label top: small tag -->
+  <text x="78" y="29"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="11"
+        font-weight="600"
+        fill="#39d353"
+        letter-spacing="1.5">WINDOWS · FREE</text>
+
+  <!-- Main label -->
+  <text x="78" y="54"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="22"
+        font-weight="700"
+        fill="#ffffff"
+        letter-spacing="0.2">Download jennyMod Installer</text>
+
+  <!-- Arrow chevron -->
+  <polyline points="385,32 398,40 385,48"
+            fill="none"
+            stroke="url(#glow)"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+</svg>
