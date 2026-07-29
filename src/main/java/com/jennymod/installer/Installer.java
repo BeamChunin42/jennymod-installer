@@ -18,6 +18,11 @@ public class Installer extends SwingWorker<Boolean, String> {
         this.minecraftPath = minecraftPath;
         this.progressBar   = progressBar;
         this.statusLabel   = statusLabel;
+        addPropertyChangeListener(evt -> {
+            if ("progress".equals(evt.getPropertyName())) {
+                progressBar.setValue((Integer) evt.getNewValue());
+            }
+        });
     }
 
     @Override
