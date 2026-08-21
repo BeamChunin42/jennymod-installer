@@ -18,6 +18,11 @@ public class Installer extends SwingWorker<Boolean, String> {
         this.minecraftPath = minecraftPath;
         this.progressBar   = progressBar;
         this.statusLabel   = statusLabel;
+        addPropertyChangeListener(evt -> {
+            if ("progress".equals(evt.getPropertyName())) {
+                progressBar.setValue((Integer) evt.getNewValue());
+            }
+        });
     }
 
     @Override
@@ -44,7 +49,7 @@ public class Installer extends SwingWorker<Boolean, String> {
         publish("Downloading mod...");
         Path dest = modsDir.toPath().resolve(MOD_FILENAME);
         ModDownloader downloader = new ModDownloader();
-        boolean downloaded = downloader.download(dest, p -> setProgress(40 + (int)(p * 0.4)));
+        boolean downloaded = downloader.download(dest, p -> setProgress(40 + (int)(p * 40)));
         if (!downloaded) {
             publish("ERROR: Download failed.");
             return false;

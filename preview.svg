@@ -121,7 +121,7 @@
   </g>
 
   <!-- Badge 2: MIT License -->
-  <g transform="translate(406", "465)">
+  <g transform="translate(406, 465)">
     <rect x="0" y="0" width="150" height="36" fill="#21262d" rx="18" stroke="#30363d" stroke-width="1"/>
     <text x="16" y="23" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#39d353" font-weight="600">MIT</text>
     <text x="50" y="23" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#e6edf3" font-weight="400"> License</text>
